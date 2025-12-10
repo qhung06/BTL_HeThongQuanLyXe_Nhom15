@@ -6,7 +6,6 @@
 #include "motorbike.h"
 #include <sstream>
 using namespace std;
-TESTTTTT
 
 vehicle* createVehicleFromLine(string line)
 {
@@ -123,7 +122,7 @@ int main() {
                 default:
                     continue;
                 }
-            } while (choice != 0);
+            } while (choice != '0');
             continue;
         case'0':
             return 0;
