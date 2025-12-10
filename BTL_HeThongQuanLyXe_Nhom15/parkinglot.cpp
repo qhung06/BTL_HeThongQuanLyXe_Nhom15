@@ -39,7 +39,7 @@ bool parkinglot::checkout(string plate, Time timeout)
         vehicle* v = slots[i]->getxe();
         if (v && v->getplate() == plate) 
         {
-            for (int j = 0; j < ticketcount; j++)                 // Tìm ticket
+            for (int j = 0; j < ticketcount; j++)                 // TE ticket
             {
                 if (tickets[j]->getPlate() == plate)
                 {
