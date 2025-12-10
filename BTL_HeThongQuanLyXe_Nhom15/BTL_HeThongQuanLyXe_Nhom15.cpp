@@ -6,7 +6,7 @@
 #include "motorbike.h"
 #include <sstream>
 using namespace std;
-
+//lknlkjk
 vehicle* createVehicleFromLine(string line)
 {
     string plate, type;
