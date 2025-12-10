@@ -7,7 +7,7 @@
 #include <sstream>
 #include <cstdio> 
 using namespace std;
-
+//lknlkjk
 vehicle* createVehicleFromLine(string line)
 {
     string plate, type;
