@@ -1,8 +1,8 @@
 
 ===== TICKET =====
-Plate: 29AB-210932
-Slot : 1
-Time in : 12:30 12/10/2025
-Time out: 12:30 12/12/2025
-Fee: 7.2e+06 VND
+Plate: 36AB-234624
+Slot : 3
+Time in : 11:50 14/10/2025
+Time out: 16:30 12/12/2025
+Fee: 6.985e+06 VND
 ==================

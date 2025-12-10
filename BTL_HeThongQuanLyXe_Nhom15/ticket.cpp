@@ -19,7 +19,7 @@ void ticket::closeTicket(Time outtime)
 void ticket::print() 
 {
     ofstream outfile;
-    outfile.open("out.txt");
+    outfile.open("out.txt",ios::app);
     if (!outfile)
         cout << "mo tep bi loi!";
     else
