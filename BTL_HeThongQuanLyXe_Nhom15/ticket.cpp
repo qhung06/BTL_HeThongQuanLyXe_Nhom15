@@ -5,6 +5,7 @@
 ticket::ticket(parkingslot* s) 
 {
     slot = s;
+    if (s != nullptr && s->getxe() != nullptr)
     timein = s->getxe()->getin();
     fee = 0;
 }
