@@ -17,5 +17,6 @@ public:
     string getplate() const;
     Time getin() const;
     Time getout() const;
+	virtual void enter() = 0; 
     virtual double calculateFee() = 0;
 };
