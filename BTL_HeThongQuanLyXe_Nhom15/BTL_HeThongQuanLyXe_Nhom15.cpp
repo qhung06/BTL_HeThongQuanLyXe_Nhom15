@@ -29,7 +29,8 @@ vehicle* createVehicleFromLine(string line)
 
 void Themxe(parkinglot lot1)
 {
-  
+    ofstream outfile;
+    outfile.open("in.txt", ios::app);
     string plate;
     Time in;
     vehicle* xe;
@@ -47,8 +48,10 @@ void Themxe(parkinglot lot1)
             cout << "Nhap bien so: ";
             cin.ignore();
             getline(cin, plate);
+			outfile<<endl << plate << " MOTORBIKE ";
             cout << "Nhap thoi gian vao: ";
             cin >> in;
+            outfile << in.gethour() << " " << in.getmin() << " " << in.getday() << " " << in.getmonth() << " " << in.getyear() << endl;
             xe->setPlate(plate);
             xe->setin(in.gethour(), in.getmin(), in.getday(), in.getmonth(), in.getyear());
             lot1.checkin(xe);
@@ -58,16 +61,20 @@ void Themxe(parkinglot lot1)
             cout << "Nhap bien so: ";
             cin.ignore();
             getline(cin, plate);
+            outfile<<endl << plate << " MOTORBIKE ";
             cout << "Nhap thoi gian vao: ";
             cin >> in;
+			outfile << in.gethour()<<" "<<in.getmin()<<" "<< in.getday()<<" "<<in.getmonth()<<" "<< in.getyear() << endl;
             xe->setPlate(plate);
             xe->setin(in.gethour(), in.getmin(), in.getday(), in.getmonth(), in.getyear());
             lot1.checkin(xe);
+
             continue;
         default:
             continue;
         }
     } while (x!='0');
+
 }
 
 void Xuatxe(parkinglot lot1)
@@ -115,7 +122,7 @@ int main() {
             lot.hienthixeTrongBai();
             do
             {
-                cout << "0. Quay lai";
+                cout << "0. Quay lai"<<endl;
                 cin >> choice;
                 switch (choice)
                 {
