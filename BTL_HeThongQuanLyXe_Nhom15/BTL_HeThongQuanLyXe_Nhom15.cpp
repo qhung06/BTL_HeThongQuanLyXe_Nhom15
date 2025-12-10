@@ -5,6 +5,7 @@
 #include "car.h"
 #include "motorbike.h"
 #include <sstream>
+#include <cstdio> 
 using namespace std;
 
 vehicle* createVehicleFromLine(string line)
@@ -30,7 +31,7 @@ vehicle* createVehicleFromLine(string line)
 void Themxe(parkinglot lot1)
 {
     ofstream outfile;
-    outfile.open("in.txt", ios::app);
+    outfile.open("DanhSachXeHienCo.txt", ios::app);
     string plate;
     Time in;
     vehicle* xe;
@@ -74,13 +75,16 @@ void Themxe(parkinglot lot1)
             continue;
         }
     } while (x!='0');
+    outfile.close();
 
 }
 
 void Xuatxe(parkinglot lot1)
 {
-    string plate;
-    Time out;
+    ifstream file1;
+    ofstream file2;
+    string plate,plate1;
+    Time out,in;
     cout << "Nhap bien so xe: ";
     cin.ignore();
     getline(cin, plate);
@@ -91,10 +95,10 @@ void Xuatxe(parkinglot lot1)
 }
 
 
-
-int main() {
+int main() 
+{
     parkinglot lot;
-    ifstream infile("in.txt");
+    ifstream infile("DanhSachXeHienCo.txt");
     string line;
     while (getline(infile, line)) 
     {
@@ -107,7 +111,8 @@ int main() {
         cout << "---------MENU-----------" << endl;
         cout << "1.Them xe" << endl;
         cout << "2.Xuat xe" << endl;
-        cout << "3.Danh sach xe dang gui" << endl;
+        cout << "3.So vi tri con trong" << endl;
+        cout << "4.Danh sach xe dang gui" << endl;
         cout << "0.Ket thuc" << endl;
         cin >> choice;
         switch (choice)
@@ -119,6 +124,8 @@ int main() {
             Xuatxe(lot);
             continue;
         case '3':
+            cout << "So vi tri con trong: " << 100 - lot.timchotrong() << endl;
+        case '4':
             lot.hienthixeTrongBai();
             do
             {

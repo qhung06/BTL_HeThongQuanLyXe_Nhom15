@@ -20,7 +20,7 @@ void ticket::closeTicket(Time outtime)
 void ticket::print() 
 {
     ofstream outfile;
-    outfile.open("out.txt",ios::app);
+    outfile.open("LuuTruVe.txt",ios::app);
     if (!outfile)
         cout << "mo tep bi loi!";
     else
@@ -33,6 +33,7 @@ void ticket::print()
         outfile << "Fee: " << fee << " VND\n";
         outfile << "==================\n";
     }
+    outfile.close();
 }
 
 string ticket::getPlate() 

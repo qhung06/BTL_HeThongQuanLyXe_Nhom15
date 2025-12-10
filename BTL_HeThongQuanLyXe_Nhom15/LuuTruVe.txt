@@ -1,0 +1,88 @@
+
+===== TICKET =====
+Plate: 36AB-234624
+Slot : 3
+Time in : 11:50 14/10/2025
+Time out: 16:30 12/12/2025
+Fee: 6.985e+06 VND
+==================
+
+===== TICKET =====
+Plate: 32
+Slot : 5
+Time in : 3:32 323/2/32
+Time out: 3:32 323/32/32
+Fee: 1.08e+08 VND
+==================
+
+===== TICKET =====
+Plate: 29AB-210932
+Slot : 1
+Time in : 12:30 12/10/2025
+Time out: 12:10 13/10/2025
+Fee: 120000 VND
+==================
+
+===== TICKET =====
+Plate: 32
+Slot : 5
+Time in : 3:32 323/2/32
+Time out: 5:32 323/2/32
+Fee: 10000 VND
+==================
+
+===== TICKET =====
+Plate: 32
+Slot : 5
+Time in : 3:32 323/2/32
+Time out: 5:32 323/2/32
+Fee: 10000 VND
+==================
+
+===== TICKET =====
+Plate: 32
+Slot : 5
+Time in : 3:32 323/2/32
+Time out: 3:32 323/2/32
+Fee: 0 VND
+==================
+
+===== TICKET =====
+Plate: 32
+Slot : 5
+Time in : 3:32 323/2/32
+Time out: 3:32 323/2/32
+Fee: 0 VND
+==================
+
+===== TICKET =====
+Plate: 32
+Slot : 5
+Time in : 3:32 323/2/32
+Time out: 3:32 323/2/32
+Fee: 0 VND
+==================
+
+===== TICKET =====
+Plate: 32
+Slot : 5
+Time in : 3:32 323/2/32
+Time out: 4:32 323/2/32
+Fee: 5000 VND
+==================
+
+===== TICKET =====
+Plate: 32
+Slot : 5
+Time in : 3:32 323/2/32
+Time out: 3:32 323/2/32
+Fee: 0 VND
+==================
+
+===== TICKET =====
+Plate: 36AB-234624
+Slot : 3
+Time in : 11:50 14/10/2025
+Time out: 15:0 14/10/2025
+Fee: 20000 VND
+==================
