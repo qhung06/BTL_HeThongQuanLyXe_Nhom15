@@ -128,7 +128,7 @@ int main()
             Xuatxe(lot);
             continue;
         case '3':
-            cout << "So vi tri con trong: " << lot.getticket() << endl;
+            cout << "So vi tri con trong: " << 100-lot.getticket() << endl;
 			continue;
         case '4':
         {

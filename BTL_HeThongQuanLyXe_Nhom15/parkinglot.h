@@ -19,5 +19,4 @@ public:
 	int findvehicle(string plate);
     int getticket();
     void hienthixeTrongBai();
-	void checkinput();
 };
