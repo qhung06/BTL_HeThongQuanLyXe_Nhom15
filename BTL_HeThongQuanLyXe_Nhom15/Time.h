@@ -7,8 +7,8 @@ class Time
 	int d, m, y, h, min;
 public:
 	Time();
-	void setTime(float h, float min, float d, float m, float y);
-	void setTime(float h, float min);
+	void setTime(int h, int min, int d, int m, int y);
+	void setTime(int h, int min);
 	Time operator-(Time t);
 	friend ostream& operator<<(ostream& os, const Time& t);
 	friend istream& operator>>(istream& is, Time& t);

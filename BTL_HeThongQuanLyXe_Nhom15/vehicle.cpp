@@ -10,12 +10,12 @@ void vehicle::setPlate(string p)
 	plate = p;
 }
 
-void vehicle::setin(float x, float y, float a ,float b, float c)
+void vehicle::setin(int x, int y, int a ,int b, int c)
 {
 	timein.setTime(x, y,a,b,c);
 }
 
-void vehicle::setout(float x, float y, float a, float b, float c)
+void vehicle::setout(int x, int y, int a, int b, int c)
 {
 	timeout.setTime(x, y,a,b,c);
 }

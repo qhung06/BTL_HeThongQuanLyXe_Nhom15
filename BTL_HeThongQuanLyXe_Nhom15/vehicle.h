@@ -12,8 +12,8 @@ public:
     vehicle();
     vehicle(string plate, Time timein, Time timeout);
     void setPlate(string p);
-    void setin(float x, float y, float a, float b, float c);
-    void setout(float x, float y, float a, float b, float c);
+    void setin(int x, int y, int a, int b, int c);
+    void setout(int x, int y, int a, int b, int c);
     string getplate() const;
     Time getin() const;
     Time getout() const;

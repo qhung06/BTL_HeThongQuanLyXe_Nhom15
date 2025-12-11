@@ -10,7 +10,7 @@ Time::Time()
 	min = 0;
 }
 
-void Time::setTime(float h, float min, float d, float m, float y)
+void Time::setTime(int h, int min, int d, int m, int y)
 {
 	this->h = h;
 	this->min = min;
@@ -19,7 +19,7 @@ void Time::setTime(float h, float min, float d, float m, float y)
 	this->y = y;
 }
 
-void Time::setTime(float h, float min)
+void Time::setTime(int h, int min)
 {
 	this->h = h;
 	this->min = min;
