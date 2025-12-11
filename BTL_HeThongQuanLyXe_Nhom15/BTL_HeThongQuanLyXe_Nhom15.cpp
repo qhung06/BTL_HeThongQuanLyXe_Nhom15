@@ -4,6 +4,7 @@
 #include "parkinglot.h"
 #include "car.h"
 #include "motorbike.h"
+#include "parkingslot.h"
 #include <sstream>
 #include <cstdio> 
 using namespace std;
@@ -28,7 +29,7 @@ vehicle* createVehicleFromLine(string line)
     return v;
 }
 
-void Themxe(parkinglot lot1)
+void Themxe(parkinglot& lot1)
 {
     ofstream outfile;
     outfile.open("DanhSachXeHienCo.txt", ios::app);
@@ -60,7 +61,7 @@ void Themxe(parkinglot lot1)
         case '2':
             xe = new car;
             cout << "Nhap bien so: ";
-            cin.ignore();
+			cin.ignore();
             getline(cin, plate);
             outfile<<endl << plate << " MOTORBIKE ";
             cout << "Nhap thoi gian vao: ";
@@ -79,7 +80,7 @@ void Themxe(parkinglot lot1)
 
 }
 
-void Xuatxe(parkinglot lot1)
+void Xuatxe(parkinglot& lot1)
 {
     ifstream file1;
     ofstream file2;
@@ -95,12 +96,12 @@ void Xuatxe(parkinglot lot1)
 }
 
 
-int main() 
+int main()
 {
     parkinglot lot;
     ifstream infile("DanhSachXeHienCo.txt");
     string line;
-    while (getline(infile, line)) 
+    while (getline(infile, line))
     {
         vehicle* v = createVehicleFromLine(line);
         lot.checkin(v);
@@ -113,6 +114,9 @@ int main()
         cout << "2.Xuat xe" << endl;
         cout << "3.So vi tri con trong" << endl;
         cout << "4.Danh sach xe dang gui" << endl;
+        cout << "5.Tim xe theo bien so" << endl;
+		cout << "6.Tinh tien gui xe" << endl;
+        cout << "7.Reset file danh sach" << endl;
         cout << "0.Ket thuc" << endl;
         cin >> choice;
         switch (choice)
@@ -125,11 +129,13 @@ int main()
             continue;
         case '3':
             cout << "So vi tri con trong: " << 100 - lot.timchotrong() << endl;
+			continue;
         case '4':
+        {
             lot.hienthixeTrongBai();
             do
             {
-                cout << "0. Quay lai"<<endl;
+                cout << "0. Quay lai" << endl;
                 cin >> choice;
                 switch (choice)
                 {
@@ -138,11 +144,57 @@ int main()
                 }
             } while (choice != '0');
             continue;
+        }
+        case '5':
+        {
+            cin.ignore();
+            cout << "nhap bien so xe: ";
+            getline(cin, line);
+            {
+                int item = lot.findvehicle(line);
+                if (item != -1)
+                    cout << "Xe o vi tri: " << item << endl;
+                else
+                    cout << "Khong tim thay xe trong bai" << endl;
+            }
+                continue;
+            }
+		case '6':
+        {
+			cin.ignore();
+			cout << "nhap bien so xe muon tinh tien: ";
+			cin >> line;
+			cout << "Nhap thoi gian checkout (gio phut ngay thang nam): ";
+			Time currenttime;
+            cin >> currenttime;
+            lot.checkout(line, currenttime);
+			continue;
+        }
+        case '7':
+        {
+			cout << "Ban co chac muon xoa toan bo danh sach xe hien co? (Y/N): ";
+			char confirm;
+			cin >> confirm;
+            if (confirm != 'N' && confirm != 'n') {
+                ofstream outfile("DanhSachXeHienCo.txt", ios::trunc);
+                outfile.close();
+                cout << "Da xoa toan bo danh sach xe hien co!" << endl;
+                lot = parkinglot();
+            }
+            else {
+                cout << "Huy thao tac xoa!" << endl;
+            }
+            continue;
+        }
+            continue;
         case'0':
             return 0;
-        }
+        default:
+			cout << "Lua chon khong hop le. Vui long chon lai." << endl;
+            break;
+            }
+        } while (1);
 
-    } while (1);
-  
-    return 0;
-}
+        return 0;
+    }
+

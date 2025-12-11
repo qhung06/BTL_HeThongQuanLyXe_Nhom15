@@ -11,7 +11,7 @@ class ticket
 public:
     ticket(parkingslot* s);
     void closeTicket(Time outtime);
-    void print();
+	void print();
     string getPlate();
 };
 

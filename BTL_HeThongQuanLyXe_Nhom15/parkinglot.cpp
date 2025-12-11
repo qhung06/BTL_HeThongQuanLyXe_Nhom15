@@ -37,7 +37,7 @@ bool parkinglot::checkout(string plate, Time timeout)
     for (int i = 0; i < slotcount; i++) 
     {
         vehicle* v = slots[i]->getxe();
-        if (v && v->getplate() == plate) 
+        if (v != nullptr && v->getplate() == plate) 
         {
             for (int j = 0; j < ticketcount; j++)                 // TE ticket
             {
@@ -54,6 +54,17 @@ bool parkinglot::checkout(string plate, Time timeout)
     }
     cout << "Vehicle not found!\n";
     return false;
+}
+int parkinglot::findvehicle(string plate) {
+    for (int i = 0; i < slotcount; i++) {
+        if (!slots[i]->ktra()) {
+            if(slots[i]->getxe()->getplate() == plate) {
+                return slots[i]->getid();
+             
+			}
+        }
+		return -1;
+    }
 }
 
 void parkinglot::hienthixeTrongBai()

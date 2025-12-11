@@ -25,6 +25,14 @@ void ticket::print()
         cout << "mo tep bi loi!";
     else
     {
+        cout << "\n===== TICKET =====\n";
+        cout << "Plate: " << slot->getxe()->getplate() << "\n";
+        cout << "Slot : " << slot->getid() << "\n";
+        cout << "Time in : " << timein << "\n";
+        cout << "Time out: " << timeout << "\n";
+        cout << "Fee: " << fee << " VND\n";
+        cout << "==================\n";
+
         outfile << "\n===== TICKET =====\n";
         outfile << "Plate: " << slot->getxe()->getplate() << "\n";
         outfile << "Slot : " << slot->getid() << "\n";
