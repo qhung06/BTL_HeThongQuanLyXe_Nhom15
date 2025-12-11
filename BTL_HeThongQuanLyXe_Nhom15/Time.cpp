@@ -3,11 +3,20 @@
 using namespace std;
 Time::Time()
 {
-	d = 12;
-	m = 10;
-	y = 2025;
 	h = 0;
 	min = 0;
+	d = 0;
+	m = 0;
+	y = 0;
+}
+
+Time::Time(int h, int min, int d, int m, int y)
+{
+	this->h = h;
+	this->min = min;
+	this->d = d;
+	this->m = m;
+	this->y = y;
 }
 
 void Time::setTime(int h, int min, int d, int m, int y)
@@ -74,12 +83,8 @@ istream& operator>>(istream& is, Time& t)
 {
 
 	is >> t.h  >> t.min >> t.d  >> t.m  >> t.y;
-
 	return is;
 }
-
-
-
 
 Time Time::operator-(Time t)
 {

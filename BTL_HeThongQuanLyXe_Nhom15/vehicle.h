@@ -10,7 +10,7 @@ protected:
     Time timeout;
 public:
     vehicle();
-    vehicle(string plate, Time timein, Time timeout);
+    vehicle(string p, Time in, Time out);
     void setPlate(string p);
     void setin(int x, int y, int a, int b, int c);
     void setout(int x, int y, int a, int b, int c);

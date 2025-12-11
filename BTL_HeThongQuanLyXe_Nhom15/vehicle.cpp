@@ -3,8 +3,15 @@
 vehicle::vehicle()
 {
 	plate = "";
+	timein = Time();
 }
 
+vehicle::vehicle(string p, Time in, Time out)
+{
+	plate = p;
+	timein = in;
+	timeout = out;
+}
 void vehicle::setPlate(string p)
 {
 	plate = p;
@@ -25,7 +32,7 @@ string vehicle::getplate() const
 	return plate;
 }
 
-Time vehicle::getin() const
+Time vehicle::getin() const 
 {
 	return timein;
 }

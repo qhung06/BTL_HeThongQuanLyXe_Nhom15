@@ -85,7 +85,7 @@ void Xuatxe(parkinglot& lot1)
     ifstream file1;
     ofstream file2;
     string plate,plate1;
-    Time out,in;
+    Time out;
     cout << "Nhap bien so xe: ";
     cin.ignore();
     getline(cin, plate);

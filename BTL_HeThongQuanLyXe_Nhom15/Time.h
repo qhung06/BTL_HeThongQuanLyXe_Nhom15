@@ -7,6 +7,7 @@ class Time
 	int d, m, y, h, min;
 public:
 	Time();
+	Time(int h, int min, int d, int m, int y);
 	void setTime(int h, int min, int d, int m, int y);
 	void setTime(int h, int min);
 	Time operator-(Time t);
