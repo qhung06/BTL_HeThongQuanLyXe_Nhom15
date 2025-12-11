@@ -17,6 +17,5 @@ public:
     bool checkin(vehicle* v);
     bool checkout(string plate, Time timeout);
 	int findvehicle(string plate);
-    int getticket();
     void hienthixeTrongBai();
 };

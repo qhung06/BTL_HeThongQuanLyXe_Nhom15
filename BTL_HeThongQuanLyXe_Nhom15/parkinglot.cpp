@@ -67,9 +67,6 @@ int parkinglot::findvehicle(string plate) {
     }
 }
 
-int parkinglot::getticket() {
-    return ticketcount;
-}
 void parkinglot::hienthixeTrongBai()
 {
     cout << "\n========= DANH SACH XE DANG TRONG BAI =========\n";
