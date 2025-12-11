@@ -72,9 +72,8 @@ ostream& operator<<(ostream& os, const Time& t)
 
 istream& operator>>(istream& is, Time& t)
 {
-	char colon, slash1, slash2;
 
-	is >> t.h >> colon >> t.min >> t.d >> slash1 >> t.m >> slash2 >> t.y;
+	is >> t.h  >> t.min >> t.d  >> t.m  >> t.y;
 
 	return is;
 }

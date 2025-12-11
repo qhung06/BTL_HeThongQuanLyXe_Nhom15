@@ -115,8 +115,7 @@ int main()
         cout << "3.So vi tri con trong" << endl;
         cout << "4.Danh sach xe dang gui" << endl;
         cout << "5.Tim xe theo bien so" << endl;
-		cout << "6.Tinh tien gui xe" << endl;
-        cout << "7.Reset file danh sach" << endl;
+        cout << "6.Reset file danh sach" << endl;
         cout << "0.Ket thuc" << endl;
         cin >> choice;
         switch (choice)
@@ -159,18 +158,7 @@ int main()
             }
                 continue;
             }
-		case '6':
-        {
-			cin.ignore();
-			cout << "nhap bien so xe muon tinh tien: ";
-			cin >> line;
-			cout << "Nhap thoi gian checkout (gio phut ngay thang nam): ";
-			Time currenttime;
-            cin >> currenttime;
-            lot.checkout(line, currenttime);
-			continue;
-        }
-        case '7':
+        case '6':
         {
 			cout << "Ban co chac muon xoa toan bo danh sach xe hien co? (Y/N): ";
 			char confirm;
