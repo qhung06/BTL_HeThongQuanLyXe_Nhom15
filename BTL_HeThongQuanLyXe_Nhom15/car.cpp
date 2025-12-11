@@ -8,8 +8,3 @@ double car::calculateFee()
     return diff.toHours() * 10000;
 }
 
-void car::enter()
-{
-	cout << "Bien so: ";     cin >> plate;
-	cout << "Time in: ";  cin >> timein;
-}

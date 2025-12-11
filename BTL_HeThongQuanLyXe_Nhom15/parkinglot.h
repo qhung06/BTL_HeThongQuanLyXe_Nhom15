@@ -17,5 +17,5 @@ public:
     bool checkin(vehicle* v);
     bool checkout(string plate, Time timeout);
     void hienthixeTrongBai();
-
+	void checkinput();
 };

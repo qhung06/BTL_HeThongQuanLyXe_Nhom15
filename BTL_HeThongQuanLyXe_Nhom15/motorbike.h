@@ -3,7 +3,6 @@
 
 class motorbike: public vehicle
 {
-	void enter() override;
 	double calculateFee() override;
 };
 

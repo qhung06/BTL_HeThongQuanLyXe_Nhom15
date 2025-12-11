@@ -76,3 +76,23 @@ void parkinglot::hienthixeTrongBai()
         cout << "Hien khong co xe nao trong bai!\n";
     }
 }
+
+void parkinglot::checkinput()
+{
+		int type;
+		cout << "Loai xe (1 = Car, 2 = Motorbike): ";
+		cin >> type;
+		cin.ignore();
+		Vehicle* v = nullptr;
+		if (type == 1) v = new car();
+		else v = new motorbike();
+		cout << "Nhap Plate: ";
+		getline(cin, v->plate);
+		cout << "Nhap thoi gian vao: ";
+		Time t;
+		cin >> t;
+		cin.ignore();
+		v->setin(t);
+	}
+
+	

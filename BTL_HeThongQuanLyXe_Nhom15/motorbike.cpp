@@ -7,9 +7,3 @@ double motorbike::calculateFee()
     Time diff = timeout - timein;
     return diff.toHours() * 5000;
 }
-
-void car::enter()
-{
-	cout << "Bien so: ";     cin >> plate;
-	cout << "Time in: ";  cin >> timein;
-}
