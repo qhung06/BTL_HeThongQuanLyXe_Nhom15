@@ -7,3 +7,4 @@ double car::calculateFee()
     Time diff = timeout - timein;
     return diff.toHours() * 10000;
 }
+
